@@ -8,10 +8,14 @@
   "files": [
     "dist"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/DylanPeltier"
   },
-  "author": "",
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c"
+  },
+  "author": "Dylan Peltier",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
@@ -19,6 +23,7 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.4",
     "rollup-plugin-dts": "^6.1.1",
+    "tslib": "^2.7.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
