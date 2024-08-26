@@ -12,17 +12,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: { variant: 'primary', children: 'Click me' },
+  args: { variant: 'primary', children: 'Button' },
 };
 
 export const Secondary: Story = {
-  args: { variant: 'secondary', children: 'Click me' },
+  args: { variant: 'secondary', children: 'Button' },
 };
 
 export const WithOnClick: Story = {
-  args: { variant: 'primary', children: 'Click me', onClick: () => alert('Clicked!') },
+  args: { variant: 'primary', children: 'Button', onClick: () => alert('Clicked!') },
 };
 
 export const Disabled: Story = {
-  args: { variant: 'primary', children: 'Click me', disabled: true },
+  args: { variant: 'primary', children: 'Button', disabled: true },
 };
