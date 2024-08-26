@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    /* Language & Environment */
+    "target": "ESNext",
+    "jsx": "react-jsx",
+
+    /* Modules */
+    "module": "ESNext",
+    "moduleResolution": "Node",
+
+    /* JavaScript Support */
+    "allowJs": false,
+    "checkJs": false,
+    "maxNodeModuleJsDepth": 1,
+
+    /* Emit */
+    "declaration": true,
+    "sourceMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "declarationDir": "types",
+
+    /* Interop Constraints */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnreachableCode": false,
+
+    /* Completeness */
+    "skipLibCheck": true,
+  }
+}
