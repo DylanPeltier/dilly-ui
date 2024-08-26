@@ -3,3 +3,4 @@ dist
 
 # Logs
 yarn-error.log
+*storybook.log

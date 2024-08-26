@@ -1,4 +1,4 @@
-button {
+.dillyui-button {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 1rem;
@@ -10,9 +10,16 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
   cursor: pointer;
+}
 
-  :hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    filter: brightness(1.25);
-  }
+.dillyui-button:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  filter: brightness(1.25);
+}
+
+.dillyui-button:disabled {
+  background-color: #737373;
+  border-color: #737373;
+  color: #e5e5e5;
+  cursor: not-allowed;
 }
