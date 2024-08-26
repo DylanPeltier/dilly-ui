@@ -1,8 +1,12 @@
+@import '../../styles/global.css';
+
 .dillyui-button {
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  position: relative;
+  overflow: hidden;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-radius: 1.563rem;
   text-align: center;
   font-size: 2rem;
@@ -13,21 +17,26 @@
   cursor: pointer;
 }
 
-.dillyui-button.primary {
-  background-color: #22333C;
-  border-color: #22333C;
-  color: #F7F7F7;
+.dillyui-button.blue {
+  background-color: var(--blue500);
+  border-color: var(--blue500);
+  color: var(--white);
 }
 
-.dillyui-button.secondary {
-  background-color: #F7F7F7;
-  border-color: #F7F7F7;
-  color: #22333C;
+.dillyui-button.red {
+  background-color: var(--red500);
+  border-color: var(--red500);
+  color: var(--white);
 }
 
-.dillyui-button:hover {
+.dillyui-button.gray {
+  background-color: var(--gray500);
+  border-color: var(--gray500);
+  color: var(--white);
+}
+
+.dillyui-button:hover:not([disabled]) {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  filter: brightness(1.25);
 }
 
 .dillyui-button:disabled {

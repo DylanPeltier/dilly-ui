@@ -1,42 +1,45 @@
-import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
-import plugin from "rollup-plugin-dts";
-import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
-import packageJson from "./package.json" with { type: "json" };
+import dts from "rollup-plugin-dts";
 
 export default [
   {
     input: "src/index.ts",
     output: [
       {
-        file: packageJson.main,
+        file: "dist/cjs/index.js",
         format: "cjs",
         sourcemap: true
       },
       {
-        file: packageJson.module,
+        file: "dist/esm/index.js",
         format: "esm",
-        sourcemap: true,
-      },
+        sourcemap: true
+      }
     ],
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        declaration: true,
+        declarationDir: "./dist/types",
+        exclude: ["**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx"]
+      }),
       postcss({
-        extensions: [".css"],
-        minimize: true,
-        sourceMap: true,
+        extract: true,
         modules: true,
+        use: ['sass'],
       }),
     ],
+    external: ["react", "react-dom"]
   },
   {
-    input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    input: "dist/types/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "es" }],
     plugins: [dts()],
-    external: [/\.css$/],
-  },
+    external: [/\.css$/]
+  }
 ];

@@ -18,7 +18,7 @@ describe('Button', () => {
   });
 
   it('renders correct classes', () => {
-    render(<Button variant='primary' data-testid="p-btn" />);
+    render(<Button variant='red' data-testid="p-btn" />);
     const pButton = screen.getByTestId('p-btn');
     expect(pButton).toHaveClass('dillyui-button');
   });

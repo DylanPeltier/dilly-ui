@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     /* Language & Environment */
-    "target": "ESNext",
+    "target": "ES5",
     "jsx": "react-jsx",
 
     /* Modules */
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
 
     /* JavaScript Support */
     "allowJs": false,
@@ -15,10 +15,11 @@
 
     /* Emit */
     "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
     "emitDeclarationOnly": true,
-    "outDir": "dist",
-    "declarationDir": "types",
+    "outDir": "dist",  // Directory for JS output (not used with emitDeclarationOnly)
+    "declarationDir": "types", // Directory for declaration files
 
     /* Interop Constraints */
     "allowSyntheticDefaultImports": true,
@@ -35,6 +36,14 @@
     "allowUnreachableCode": false,
 
     /* Completeness */
-    "skipLibCheck": true,
-  }
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx"
+  ]
 }
