@@ -1,6 +1,6 @@
 {
   "name": "@dylanpeltier/dilly-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Custom UI Library for personal projects.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
